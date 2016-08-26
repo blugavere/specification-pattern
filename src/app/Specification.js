@@ -106,18 +106,13 @@ export class NotSpecification extends Specification {
    * @params {Specification} firstSpec A Specification
    * @params {Specification} secondSpec A Specification
    */
-  constructor (firstSpec, secondSpec) {
+  constructor (firstSpec) {
     super()
     /**
      * The first spec argument
      * @type {Specification}
      */
     this.firstSpec = firstSpec
-    /**
-     * The second spec argument
-     * @type {Specification}
-     */
-    this.secondSpec = secondSpec
   }
 
   /**
@@ -126,6 +121,6 @@ export class NotSpecification extends Specification {
    * @return {Boolean} The result of the comparison
    */
   isSatisfied (candidate) {
-    return this.firstSpec.isSatisfied(candidate) !== this.secondSpec.isSatisfied(candidate)
+    return !this.firstSpec.isSatisfied(candidate)
   }
 }

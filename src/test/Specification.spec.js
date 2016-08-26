@@ -86,7 +86,7 @@ describe('NotSpecification', () => {
 
   beforeEach(() => {
     mockSpec = new MockSpec()
-    spec = new NotSpecification(mockSpec, mockSpec)
+    spec = new NotSpecification(mockSpec)
   })
 
   describe('NotSpecification#isSatisfied', () => {
