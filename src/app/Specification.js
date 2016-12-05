@@ -23,16 +23,15 @@ export default class Specification extends ISpecification {
 
   /**
    * Implements the or method
-   * @params {ISpecification} spec An object of ISpecification implementation
    * @return {AndSpecification} An object of ISpecification implementation
    */
-  not (spec) {
-    return new NotSpecification(this, spec)
+  not () {
+    return new NotSpecification(this)
   }
 }
 
 /**
- * hronous and specificaiton
+ * Synchronous and specificaiton
  */
 export class AndSpecification extends Specification {
   /**
@@ -65,7 +64,7 @@ export class AndSpecification extends Specification {
 }
 
 /**
- * hronous or specificaiton
+ * Synchronous or specificaiton
  */
 export class OrSpecification extends Specification {
   /**
@@ -98,7 +97,7 @@ export class OrSpecification extends Specification {
 }
 
 /**
- * hronous not specificaiton
+ * Synchronous not specificaiton
  */
 export class NotSpecification extends Specification {
   /**
