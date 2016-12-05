@@ -1,6 +1,6 @@
 {
   "name": "specification-pattern",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple specification pattern implementation",
   "main": "./dist/app.js",
   "homepage": "https://github.com/Skahrz/specification-pattern",
